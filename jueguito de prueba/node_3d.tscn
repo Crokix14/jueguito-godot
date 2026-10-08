@@ -1,21 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://0h55vyhtg4ba"]
+[gd_scene load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://Node3D.gd" id="1_00w7p"]
-[ext_resource type="Script" path="res://CharacterBody3D.gd" id="2_scp8m"]
+[ext_resource type="Script" path="res://Node3D.gd" id="1"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ttnn0"]
-
-[node name="Node3D" type="Node3D"]
-script = ExtResource("1_00w7p")
-
-[node name="Player" type="CharacterBody3D" parent="."]
-script = ExtResource("2_scp8m")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.88928, 0)
-shape = SubResource("CapsuleShape3D_ttnn0")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
-
-[node name="Camera3D" type="Camera3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.36751, 0)
+[node name="NeonArena" type="Node3D"]
+script = ExtResource("1")
